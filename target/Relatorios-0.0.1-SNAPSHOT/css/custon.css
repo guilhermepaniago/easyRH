@@ -1,0 +1,21 @@
+.pagedisplay{
+	
+	width:40px;
+	text-align:center;
+	border:none;
+	background-color:transparent;
+	
+}
+
+#pager span{
+	color:#666;
+	float:right;
+	
+}
+
+#pager form{
+	text-align:left;
+	padding:10px;
+	
+	
+}

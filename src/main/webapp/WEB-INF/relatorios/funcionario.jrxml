@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="funcionario" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8dfb8bc-ec83-444b-9efe-7a53575e13cc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select nome,sobrenome, departamento, matricula, salario from funcionario]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sobrenome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="matricula" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="nome_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{nome}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="b8b4250f-b87c-4305-b35a-ae4878a0398b"/>
+			</line>
+			<line>
+				<reportElement x="555" y="1" width="1" height="78" uuid="4e01e41e-76d1-418b-8169-454e9aa36690"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="78" uuid="e4da8a73-7eb0-4dd7-b5ef-e72f16f4c6f9"/>
+			</line>
+			<line>
+				<reportElement x="1" y="78" width="554" height="1" uuid="9c8eacb0-f478-43a8-aaf6-d24f905845ee"/>
+			</line>
+			<line>
+				<reportElement x="138" y="2" width="1" height="77" uuid="bdc38e5c-9291-4457-9998-208e5f033613"/>
+			</line>
+			<frame>
+				<reportElement mode="Opaque" x="140" y="2" width="415" height="76" backcolor="#EEEEEE" uuid="70dddb78-7f79-45cd-86f7-81a8abe2bd92"/>
+				<staticText>
+					<reportElement x="13" y="10" width="184" height="20" uuid="56713256-9f4c-46c3-840e-2e1cc8b30774"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relátorio De Funcionário]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="13" y="30" width="36" height="20" uuid="9d4228e9-9140-4baf-a342-4c6ad60d025e"/>
+					<text><![CDATA[Data:]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="49" y="30" width="100" height="20" uuid="8f575966-a646-4d25-82a1-84221a1225d0"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="13" y="50" width="74" height="20" uuid="0ca91b63-0ebe-46de-ab3e-95c93fc990b1"/>
+					<text><![CDATA[Departamento:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="87" y="50" width="62" height="20" uuid="860a0d73-6849-4ebb-9a96-005edad58b90"/>
+					<text><![CDATA[Todos]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="b0db4307-d1b8-4303-9e48-8c727a3994f6"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="1" y="10" width="554" height="22" forecolor="#F0F0F0" backcolor="#EEEEEE" uuid="eadb2d3d-e3e0-4e6f-8f4b-d261c9e17e5e"/>
+				<line>
+					<reportElement x="0" y="0" width="554" height="1" uuid="08aaa0b2-13a4-432b-ab6b-ab703f03f6fa"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="3" width="61" height="19" uuid="93da4126-6af8-4c59-baa0-06fe9b5ee260"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[MATRICULA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="2" width="100" height="20" uuid="6b6b4b47-2810-4dde-96f4-9672fe60b38d"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="191" y="0" width="100" height="20" uuid="fbc3645f-b815-41c3-99f2-80691db80a69"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SOBRENOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="336" y="3" width="100" height="19" uuid="408716f1-753c-4962-9333-e68e98253969"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[DEPARTAMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="473" y="3" width="81" height="19" uuid="a0029895-af36-4d02-ae38-775f06ba2061"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SALARIO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="89" y="1" width="100" height="20" uuid="4b7228e3-a3a4-4cfe-80ef-dbd5561862a6"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="0" width="145" height="20" uuid="89165484-9f2f-438b-a4c8-26e15886bbb6"/>
+				<textFieldExpression><![CDATA[$F{sobrenome}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="20" width="555" height="1" uuid="e3332429-2fc1-4a19-8e3e-ad269cad8863"/>
+			</line>
+			<textField>
+				<reportElement x="337" y="0" width="100" height="20" uuid="fec87d67-3b3b-40ac-8837-a8341ade37de"/>
+				<textFieldExpression><![CDATA[$F{departamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="1" width="100" height="20" uuid="be555084-0f1f-4aee-afc2-cdf88f4a7e9f"/>
+				<textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="3" width="81" height="20" uuid="b97a56a0-d277-41cc-8991-efaa631ec8cc"/>
+				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
